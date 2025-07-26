@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+  }
+  .container {
+    display: inline-block;
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+  .calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-auto-rows: 60px;
+    gap: 12px;
+  }
+  button {
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background: #3498db;
+    transition: background 0.2s;
+  }
+  button:hover {
+    background: #2980b9;
+  }
+
+  /* Operators */
+  .operators {
+    background: #e67e22;
+  }
+  .operators:hover {
+    background: #ca7d1e;
+  }
+  .backspace {
+    background: #e74c3c;
+  }
+  .equals {
+    background: #2ecc71;
+  }
+  .equals:hover {
+    background: #249c57;
+  }
+
+  /* Grid placements */
+  /* First row: Clear / * / / - */
+  .clear { grid-column: 1 / 2; grid-row: 1 / 2; }
+  .multiply { grid-column: 2 / 3; grid-row: 1 / 2; }
+  .divide { grid-column: 3 / 4; grid-row: 1 / 2; }
+  .subtract { grid-column: 4 / 5; grid-row: 1 / 2; }
+
+  /* Second row: 7 8 9 + */
+  .seven { grid-column: 1 / 2; grid-row: 2 / 3; }
+  .eight { grid-column: 2 / 3; grid-row: 2 / 3; }
+  .nine { grid-column: 3 / 4; grid-row: 2 / 3; }
+  .add { 
+    grid-column: 4 / 5; 
+    grid-row: 2 / 4; /* span two rows vertically (9 and 6 height combined) */
+  }
+
+  /* Third row: 4 5 6 (add continues) */
+  .four { grid-column: 1 / 2; grid-row: 3 / 4; }
+  .five { grid-column: 2 / 3; grid-row: 3 / 4; }
+  .six { grid-column: 3 / 4; grid-row: 3 / 4; }
+
+  /* Fourth row: 1 2 3 -, add */
+  .one { grid-column: 1 / 2; grid-row: 4 / 5; }
+  .two { grid-column: 2 / 3; grid-row: 4 / 5; }
+  .three { grid-column: 3 / 4; grid-row: 4 / 5; }
+  .equals { 
+    grid-column: 4 / 5; 
+    grid-row: 4 / 5;
+    border-radius: 5px;
+  }
+
+
+  /* Fifth row: 0 . = */
+  .zero { 
+    grid-column: 1 / 3; /* width of 1 + 2 */ 
+    grid-row: 5 / 6; 
+  }
+  .decimal {
+    grid-column: 3 / 4; 
+    grid-row: 5 / 6;
+  }
+  .equals {
+    grid-column: 4 / 5;
+    grid-row: 4 / 6; /* span two rows vertically */
+    background: #2ecc71;
+  }
+
